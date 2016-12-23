@@ -19,7 +19,7 @@
       "homepage": "https://www.creativeworkspace.de/"
     }
   ],
-  "license": "MIT",
+  "license": "GPL-2.0+",
   "support": {
     "issues": "https://github.com/markussom/html_compress/issues"
   },

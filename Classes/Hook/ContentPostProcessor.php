@@ -2,10 +2,15 @@
 namespace Markussom\HtmlCompress\Hook;
 
 /*
- * This file is part of the Markussom/ project under GPLv2 or later.
+ * This file is part of the TYPO3 console project.
  *
- * For the full copyright and license information, please read the
- * LICENSE.md file that was distributed with this source code.
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read
+ * LICENSE file that was distributed with this source code.
+ *
  */
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
