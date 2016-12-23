@@ -1,0 +1,71 @@
+{
+  "name": "markussom/html-compress",
+  "type": "typo3-cms-extension",
+  "description": "Compress/minify your HTML",
+  "keywords": [
+    "TYPO3 CMS",
+    "front-end",
+    "web",
+    "compress",
+    "minify",
+    "html"
+  ],
+  "homepage": "https://github.com/markussom/html_compress",
+  "authors": [
+    {
+      "name": "Markus Sommer",
+      "email": "info@creativeworkspace.de",
+      "role": "Developer",
+      "homepage": "https://www.creativeworkspace.de/"
+    }
+  ],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/markussom/html_compress/issues"
+  },
+  "require": {
+    "typo3/cms-core": "^7.6.0 || ^8.0",
+    "typo3/cms": "^7.6.0 || ^8.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "2.*",
+    "namelesscoder/typo3-repository-client": "^1.2",
+    "mikey179/vfsStream": "1.4.*@dev",
+    "phpunit/phpunit": "^5.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Markussom\\HtmlCompress\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TYPO3\\CMS\\Core\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/core/Tests/",
+      "TYPO3\\CMS\\Fluid\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
+    }
+  },
+  "replace": {
+    "html_compress": "self.version",
+    "typo3-ter/html-compress": "self.version"
+  },
+  "config": {
+    "process-timeout": 2000,
+    "vendor-dir": ".build/vendor",
+    "bin-dir": ".build/bin"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "mkdir -p .build/web/typo3conf/ext/",
+      "[ -L .build/web/typo3conf/ext/html_compress ] || ln -snvf ../../../../. .build/web/typo3conf/ext/html_compress"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".build/web"
+    }
+  }
+}
