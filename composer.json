@@ -25,7 +25,8 @@
   },
   "require": {
     "typo3/cms-core": "^7.6.0 || ^8.0",
-    "typo3/cms": "^7.6.0 || ^8.0"
+    "typo3/cms": "^7.6.0 || ^8.0",
+    "wyrihaximus/html-compress": "^1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "2.*",
