@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$composerJson = json_decode(file_get_contents('../composer.json'), true);
+$composerJson = json_decode(file_get_contents(__DIR__ . '/../composer.json'), true);
 $version = getenv('EXT_VERSION');
 if (empty($version)) {
     throw new \Exception('No version set use EXT_VERSION="1.0.0-dev ./GenerateExtEmConf.php', 1482615696);
@@ -33,4 +33,4 @@ $extEmConfContent = '<?php
 $EM_CONF[$_EXTKEY] = ' . var_export($extEmConfContent, true) . ';
 ';
 
-file_put_contents('../ext_emconf.php', $extEmConfContent);
+file_put_contents(__DIR__ . '/../ext_emconf.php', $extEmConfContent);
