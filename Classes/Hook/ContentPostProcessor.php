@@ -13,12 +13,13 @@ namespace Markussom\HtmlCompress\Hook;
  *
  */
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use WyriHaximus\HtmlCompress\Factory;
 
 /**
  * Class ContentPostProcessor
+ *
+ * @author Markus Sommer
  */
 class ContentPostProcessor
 {
@@ -26,29 +27,19 @@ class ContentPostProcessor
      * @param $funcRef
      * @param TypoScriptFrontendController $tsFrontendController
      */
-    public function render($funcRef, TypoScriptFrontendController $tsFrontendController)
+    public function render($funcRef, $tsFrontendController)
     {
-        if ($this->isDefaultTypeNum()) {
-            if ($this->isCompressBodyActive()) {
-                $parser = Factory::construct();
+        if ($this->isCompressBodyActive()) {
+            $parser = Factory::construct();
 
-                $pattern = '~<body.*?>(.*?)<\/body>~is';
-                preg_match($pattern, $tsFrontendController->content, $body);
-                $tsFrontendController->content = preg_replace(
-                    '/<body .*<\/body>/is',
-                    $parser->compress($body[0]),
-                    $tsFrontendController->content
-                );
-            }
+            $pattern = '~<body.*?>(.*?)<\/body>~is';
+            preg_match($pattern, $tsFrontendController->content, $body);
+            $tsFrontendController->content = preg_replace(
+                $pattern,
+                $parser->compress($body[0]),
+                $tsFrontendController->content
+            );
         }
-    }
-
-    /**
-     * @return bool
-     */
-    protected function isDefaultTypeNum()
-    {
-        return GeneralUtility::_GET('type') === null;
     }
 
     /**
