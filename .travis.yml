@@ -8,6 +8,7 @@ php:
   - 7
 
 env:
+  matrix:
 #  - TYPO3_VERSION="^6.2.0"
   - TYPO3_VERSION="^7.6.0"
   - TYPO3_VERSION="dev-master"
@@ -43,7 +44,6 @@ cache:
 before_install:
   - phpenv config-rm xdebug.ini
   - composer self-update
-  - composer --version
 
 before_script:
   - composer require typo3/cms="$TYPO3_VERSION"
@@ -55,7 +55,7 @@ script:
   - >
     echo;
     echo "Running unit tests";
-    .Build/bin/phpunit -c .build/vendor/typo3/cms/typo3/sysext/core/Build/UnitTests.xml Tests/Unit/
+    .build/bin/phpunit -c .build/vendor/typo3/cms/typo3/sysext/core/Build/UnitTests.xml Tests/Unit/
 
   - >
     echo;

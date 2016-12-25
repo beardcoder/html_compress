@@ -5,7 +5,7 @@ echo "Cleanup"
 rm -rf .build
 
 echo "Build ext_emconf.php"
-php ./Build/GenerateExtEmConf.php
+EXT_VERSION="$EXT_VERSION" ./Build/GenerateExtEmConf.php
 
 echo "Package as zip"
-mkdir Export; zip -9 -r --exclude=".editorconfig" --exclude="*.git*" --exclude=".build/*" --exclude=".idea/*" --exclude="Tests/*" --exclude="Export/" Export/html_compress_$EXT_VERSION.zip .
+mkdir Export; zip -9 -r --exclude=".editorconfig" --exclude="*.git*" --exclude=".build/*" --exclude=".idea/*" --exclude="Tests/*" --exclude="Export/*" Export/html_compress_$EXT_VERSION.zip .
