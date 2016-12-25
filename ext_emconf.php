@@ -1,21 +1,20 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array (
-  'title' => 'markussom/html-compress',
-  'description' => 'Compress/minify your HTML',
+  'title' => 'HTML minify',
+  'description' => 'Compress/minify your HTML output',
   'category' => 'FE',
   'author' => 'Markus Sommer',
   'author_email' => 'info@creativeworkspace.de',
   'author_company' => 'https://www.creativeworkspace.de/',
   'state' => 'stable',
   'clearCacheOnLoad' => 1,
-  'lockType' => '',
-  'version' => '1.0.0',
+  'version' => '1.1.0',
   'constraints' => 
   array (
     'depends' => 
     array (
-      'typo3' => '7.5.0-7.99.99',
+      'typo3' => '7.6.0-8.9.99',
     ),
     'conflicts' => 
     array (

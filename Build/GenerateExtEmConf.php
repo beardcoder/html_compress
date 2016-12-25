@@ -8,7 +8,7 @@ if (empty($version)) {
 }
 
 $extEmConfContent = [
-    'title' => $composerJson['name'],
+    'title' => 'HTML minify',
     'description' => $composerJson['description'],
     'category' => 'FE',
     'author' => $composerJson['authors'][0]['name'],
@@ -16,11 +16,10 @@ $extEmConfContent = [
     'author_company' => $composerJson['authors'][0]['homepage'],
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
-    'lockType' => '',
     'version' => $version,
     'constraints' => [
         'depends' => [
-            'typo3' => '7.5.0-7.99.99',
+            'typo3' => '7.6.0-8.9.99',
         ],
         'conflicts' => [],
         'suggests' => [],
