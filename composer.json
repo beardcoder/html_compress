@@ -25,7 +25,6 @@
   },
   "require": {
     "typo3/cms-core": ">=7.6.0,<8.9.99",
-    "typo3/cms": ">=7.6.0,<8.9.99",
     "wyrihaximus/html-compress": "^1.2"
   },
   "require-dev": {
