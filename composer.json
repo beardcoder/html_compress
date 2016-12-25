@@ -41,6 +41,7 @@
   },
   "autoload-dev": {
     "psr-4": {
+      "Markussom\\HtmlCompress\\Tests\\": "Tests",
       "TYPO3\\CMS\\Core\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/core/Tests/",
       "TYPO3\\CMS\\Fluid\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
     }
@@ -52,7 +53,10 @@
   "config": {
     "process-timeout": 2000,
     "vendor-dir": ".build/vendor",
-    "bin-dir": ".build/bin"
+    "bin-dir": ".build/bin",
+    "preferred-install": {
+      "typo3/cms": "source"
+    }
   },
   "scripts": {
     "post-autoload-dump": [
