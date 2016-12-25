@@ -1,4 +1,12 @@
 .idea/
 .build/*
-vendor/*
 composer.lock
+
+/Resources/Private/Libraries/websharks/
+/Resources/Private/Libraries/natxet/
+/Resources/Private/Libraries/composer/
+/Resources/Private/Libraries/linkorb/
+/Resources/Private/Libraries/meenie/
+/Resources/Private/Libraries/patchwork/
+/Resources/Private/Libraries/wyrihaximus/
+/Export/*

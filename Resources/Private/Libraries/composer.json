@@ -1,0 +1,11 @@
+{
+  "name": "markussom/html-compress",
+  "description": "Required Tools",
+  "require": {
+    "wyrihaximus/html-compress": "^1.2"
+  },
+  "config": {
+    "vendor-dir": ".",
+    "bin-dir": "bin"
+  }
+}

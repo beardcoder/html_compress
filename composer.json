@@ -58,6 +58,16 @@
     "post-autoload-dump": [
       "mkdir -p .build/web/typo3conf/ext/",
       "[ -L .build/web/typo3conf/ext/html_compress ] || ln -snvf ../../../../. .build/web/typo3conf/ext/html_compress"
+    ],
+    "release": [
+      "@ext-dependencies",
+      "@package"
+    ],
+    "package": [
+      "./Build/Release.sh"
+    ],
+    "ext-dependencies": [
+      "cd Resources/Private/Libraries && composer install"
     ]
   },
   "extra": {
