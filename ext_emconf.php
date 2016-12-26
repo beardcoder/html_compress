@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = array (
   'author_company' => 'https://www.creativeworkspace.de',
   'state' => 'stable',
   'clearCacheOnLoad' => 1,
-  'version' => '1.1.0',
+  'version' => '1.1.1',
   'constraints' => 
   array (
     'depends' => 
