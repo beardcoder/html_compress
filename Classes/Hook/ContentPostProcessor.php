@@ -18,12 +18,16 @@ use WyriHaximus\HtmlCompress\Factory;
 
 /**
  * Class ContentPostProcessor
+ * This class use the "WyriHaximus\HtmlCompress" package to
+ * minify the TYPO3 frontend output
  *
  * @author Markus Sommer
  */
 class ContentPostProcessor
 {
     /**
+     * This function minify the body
+     *
      * @param $funcRef
      * @param TypoScriptFrontendController $tsFrontendController
      */
@@ -43,6 +47,11 @@ class ContentPostProcessor
     }
 
     /**
+     * Is compress body aktive
+     *
+     * Pattern in TypoScript:
+     * "config.compressBody = 1"
+     *
      * @return bool
      */
     protected function isCompressBodyActive()
